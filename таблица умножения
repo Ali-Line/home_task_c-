@@ -1,0 +1,57 @@
+#include <iostream>
+#include <windows.h>
+#include <string>
+
+#include <stdio.h>      
+#include <stdlib.h>     
+#include <time.h>      
+
+using namespace std;
+
+int main()
+
+{
+
+    setlocale(LC_ALL, "RUS");
+    srand(time(NULL));
+    int a = 1, ask = 0;
+
+    while (a != 0)
+    {
+
+
+
+        int num1{ 1 + rand() % 10 }, num2{ 1 + rand() % 10 }, result = 0, answer = 0, goodanswer = 0;
+
+        cout << num1 << " * " << num2 << "\n";
+        result = num1 * num2;
+        cout << "\n";
+        cin >> answer;
+        if (ask == 10) {
+            a = a - 1;
+        }
+        cout << "\n";
+        if (result == answer) {
+            cout << "ответ верный. продолжаем!  " << "\n";
+            goodanswer += 1;
+            ask += 1;
+        }
+        else {
+            cout << "иди считать учись" << "\n";
+            ask += 1;
+        }
+        cout << "\n";
+        if (goodanswer >= 5) {
+            cout << "ваши вычислительные способности выше средних ";
+        }
+        else if (goodanswer <= 5) {
+            cout << "ваши вычислительные способности ниже средних ";
+        }
+    }
+
+
+
+
+
+  
+}

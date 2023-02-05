@@ -1,0 +1,127 @@
+#include <iostream>
+#include <windows.h>
+
+#include <string>
+
+
+using namespace std;
+
+int main()
+
+{
+
+	setlocale(LC_ALL, "RUS");
+	int x1 = 6, x2 = 6, x3 = 6, x4 = 6, y = 0, b = 0, ca = 0, doo = 4, mimi = 3, doz = 2, sum = 0, f = 0,i=0;
+	float car = 350.00, dool = 243.00, mimimishka = 450.00;
+	boolean  h = true;
+	boolean g = true;
+	int a[5]{ 0,350,243,450,1500 };
+
+	cout << " есть клиент ?" << "\n";
+	cin >> y;
+
+	
+	if (y == 1) {
+		g = false;
+	}
+	else if (y == 0) {
+		g = true;
+	}
+	else {
+		cout << " придерживайтесь инструкций     ";
+	}
+		if (x1 <= 0 || x2 <= 0 || x3 <= 0 || x4 <= 0) {
+			f = f + 1;
+			g = false;
+
+		}
+		
+		
+		/*while (g != false && x1 >= 0 || x2 >= 0 || x3 >= 0 || x4 >= 0)*/
+		{
+			if (x1 <= 0 || x2 <= 0 || x3 <= 0 || x4 <= 0) {
+				h=false;
+			}
+			while (h==true)
+			{
+				for (; y > 0; y--)
+
+				cout << "выберите товар " << "\n" << "1- машинка" << "\n" << "2- кукла" << "\n" << "3 - мяч" << "\n" << "4- модернизированный ак 47-го калибра с подствольным гранатометом GROM" << "\n";
+				cin >> ca;
+				cout << "введите количество " << "\n";
+				cin >> b;
+
+				if (b >x1) {
+					cout << " количество ограничена" << "\n";
+					h = false;
+					y = 0;
+				}
+				else if (b >x2) {
+					cout << " количество ограничена" << "\n";
+					h = false;
+					y = 0;
+
+				}
+				else if (b > x3) {
+					h = false;
+					y = 0;
+					
+					cout << " количество ограничена" << "\n";
+				}
+				else if (b > x4) {
+					h = false;
+					y = 0;
+					
+					cout << " количество ограничена" << "\n";
+				}
+
+
+
+
+				sum = sum+a[ca] * b;
+				cout <<" сумма "<< sum << "\n";
+
+
+
+
+
+				if (ca == 1) {
+					x1 = x1 - b;
+				}
+				else if (ca == 2) {
+					x2 = x2 - b;
+				}
+				else if (ca == 3) {
+					x3 = x3 - b;
+				}
+				else if (ca == 4) {
+					x4 = x4 - b;
+				}
+				else
+				{
+					cout << " придерживайтесь инструкций     ";
+
+				}
+
+
+				
+
+				cout << "\n" << "########################" << "\n" << x1 << "\n" << x2 << "\n" << x3 << "\n" << x4 << "########################" << "\n";
+
+				cout << "есть товар? " << "\n";
+				cin >> i;
+				if (i == 1) {
+					y = 0;
+
+				}
+				
+
+				
+
+
+			}
+
+		}
+
+
+	}

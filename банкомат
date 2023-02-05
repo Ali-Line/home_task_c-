@@ -1,0 +1,67 @@
+#include <iostream>
+#include <string.h>
+
+
+
+
+
+using namespace std;
+
+int main()
+{
+
+	setlocale(LC_ALL, "RUS");
+	int pin[4] = { 1234,2345,3456,4567 };
+	int id[] = { 0001,0010,0100,1000 };
+	int money[] = { 1000,1500,2000,2500 };
+	int pin1 = 0, id1 = 0,money1=0,a=0;
+
+
+	cout << "введите id на карте  " << "\n";
+	cin >> id1;
+	cout << "введите пин код  " << "\n";
+	cin >> pin1;
+	cout << "\n";
+
+	if (pin[0] == pin1 && id[0]==id1 || pin[1] == pin1 && id[1] == id1 || pin[2] == pin1 && id[2] == id1 || pin[3] == pin1 && id[3] == id1) {
+		cout << "добро пожаловать " << "\n";
+
+		cout << "введите желаемое количество  $$$  " << "\n";
+		cin >> money1;
+
+		cout << "выберите действие: " << "\n";
+		
+		cout << "1 -- снять деньги " << "\n";
+		cout << "2  --  пополнить баланс " << "\n";
+		cin >> a;
+
+		if (a == 1) {
+			money1 = money1 * -1;
+		}
+
+
+	
+		if (id1 == id[0]&& money1<=money[0]) {
+			money[0] = money[0] + money1;
+			cout << "$$$$$$" <<money[0]<< "\n";
+		}
+		else if (id1 == id[1] && money1 <= money[1]) {
+			money[1] = money[1] + money1;
+			cout << "$$$$$$" << money[1] << "\n";
+		}
+
+		else if (id1 == id[2] && money1 <= money[2]) {
+			money[2] = money[2] + money1;
+			cout << "$$$$$$" << money[2] << "\n";
+		}
+		else if (id1 == id[3] && money1 <= money[3]) {
+			money[3] = money[3] + money1;
+			cout << "$$$$$$" << money[3] << "\n";
+		}
+		
+	}
+
+	
+
+
+}

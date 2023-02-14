@@ -1,0 +1,32 @@
+#include<iostream>
+#include"time.h"
+
+
+using namespace std;
+int main() {
+	srand(time(NULL));
+
+	int max = 0, min = 10, usernum = 0;
+	const int size = 10;
+	cin >> usernum;
+	int arr[size];
+
+	for (int j = 0; j < usernum; j++)
+	{
+		arr[j] = 1 + rand() % 10;
+		cout << arr[j];
+	}
+
+	for (int i = 0; i < usernum; i++)
+	{
+		if (arr[i] > max) {
+			max = arr[i];
+		}
+		if (arr[i] < min) {
+			min = arr[i];
+		}
+		
+
+	}
+	cout << "\n" << min << "\n" << max << "\n";
+}
